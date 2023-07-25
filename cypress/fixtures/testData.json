@@ -1,0 +1,14 @@
+{
+    "formLayoutData": {
+        "name": "Gerardo",
+        "email": "test@test.com",
+        "emailPassword": "test@test.com",
+        "password": "12345"
+    },
+    "smartTableData": {
+        "firstNameToUpdate": "Ann",
+        "newAge": "20",
+        "newFirstName": "John",
+        "newLastName": "Oliver"
+    }
+}
