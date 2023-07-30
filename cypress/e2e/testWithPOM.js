@@ -11,7 +11,7 @@ describe('Test with Page Object Model', () => {
     cy.visit('/');
   });
 
-  it.only('Verify navigation across different pages', () => {
+  it('Verify navigation across different pages', () => {
     navigateTo.formLayoutPage()
 
     cy.contains('nb-card', 'Inline form').find('form').within(() => {
