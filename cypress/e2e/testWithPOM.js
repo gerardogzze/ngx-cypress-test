@@ -69,5 +69,11 @@ describe('Test with Page Object Model', () => {
     navigateTo.smartTablePage()
     onSmartTablePage.addNewRecordWithFirstAndLastName('John', 'Oliver')
   })
+
+
+  it('Create a new record with first name and last name', () => {
+    navigateTo.smartTablePage()
+    onSmartTablePage.addNewRecordWithFirstAndLastName('John', 'Oliver')
+  })
 });
 
