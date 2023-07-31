@@ -44,7 +44,9 @@ describe('Test with Page Object Model', () => {
     })
 
     navigateTo.datepickerPage()
-    onDatePickerPage.selectCommonDatepickerDateFromToday(4)
+    onDatePickerPage.selectCommonDatepickerDateFromToday(700).then(dateAssert => {
+      expect(dateAssert).to.be.true
+    })
     onDatePickerPage.selectDatepickerWithRangeFromToday(50, 51)
 
   });
@@ -70,9 +72,6 @@ describe('Test with Page Object Model', () => {
     onSmartTablePage.addNewRecordWithFirstAndLastName('John', 'Oliver')
   })
 
-  it('Create a new record with first name and last name', () => {
-    navigateTo.smartTablePage()
-    onSmartTablePage.addNewRecordWithFirstAndLastName('John', 'Oliver')
-  })
+
 });
 
