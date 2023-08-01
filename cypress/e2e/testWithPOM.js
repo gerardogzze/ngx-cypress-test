@@ -69,7 +69,11 @@ describe('Test with Page Object Model', () => {
 
   it('Create a new record with first name and last name', () => {
     navigateTo.smartTablePage()
-    onSmartTablePage.addNewRecordWithFirstAndLastName('John', 'Oliver')
+    cy.fixture('testData.json').then(data => {
+      const newRecordData = data.newRecordData
+      onSmartTablePage.addNewRecordWithFirstAndLastName(newRecordData.firstName, newRecordData.lastName)
+    })
+
   })
 
 

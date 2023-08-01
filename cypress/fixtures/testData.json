@@ -10,5 +10,9 @@
         "newAge": "20",
         "newFirstName": "John",
         "newLastName": "Oliver"
+    },
+    "newRecordData": {
+        "firstName": "Ann",
+        "lastName": "Oliver"
     }
 }
