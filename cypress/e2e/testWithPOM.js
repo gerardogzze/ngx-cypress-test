@@ -44,7 +44,7 @@ describe('Test with Page Object Model', () => {
     })
 
     navigateTo.datepickerPage()
-    onDatePickerPage.selectCommonDatepickerDateFromToday(700).then(dateAssert => {
+    onDatePickerPage.selectCommonDatepickerDateFromToday(10).then(dateAssert => {
       expect(dateAssert).to.be.true
     })
     onDatePickerPage.selectDatepickerWithRangeFromToday(50, 51)
