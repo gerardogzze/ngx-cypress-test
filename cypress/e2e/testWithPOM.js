@@ -44,7 +44,9 @@ describe('Test with Page Object Model', () => {
     })
 
     navigateTo.datepickerPage()
-    onDatePickerPage.selectCommonDatepickerDateFromToday(4)
+    onDatePickerPage.selectCommonDatepickerDateFromToday(10).then(dateAssert => {
+      expect(dateAssert).to.be.true
+    })
     onDatePickerPage.selectDatepickerWithRangeFromToday(50, 51)
 
   });
@@ -67,7 +69,13 @@ describe('Test with Page Object Model', () => {
 
   it('Create a new record with first name and last name', () => {
     navigateTo.smartTablePage()
-    onSmartTablePage.addNewRecordWithFirstAndLastName('John', 'Oliver')
+    cy.fixture('testData.json').then(data => {
+      const newRecordData = data.newRecordData
+      onSmartTablePage.addNewRecordWithFirstAndLastName(newRecordData.firstName, newRecordData.lastName)
+    })
+
   })
+
+
 });
 
